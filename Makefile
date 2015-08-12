@@ -1,8 +1,8 @@
-FC=gfortran
+FC=ifort
 
 FCFLAGS= -g -O2 -cpp
-FCFLAGS+=-I/usr/local/include
-LDFLAGS=-L/usr/local/lib -llapack -lblas
+LDFLAGS= /lily/ywchoe/0.COMPILE/LAPACK-3.5.0/liblapack.a \
+		/lily/ywchoe/0.COMPILE/BLAS/blas.a 
 
 LIBS = 
 

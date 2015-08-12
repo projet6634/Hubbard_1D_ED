@@ -89,7 +89,7 @@ program main
         write(*,*) "### Ground state ", i
         do j=1,N_d
             if (H(j,i)>gs_coeff_cut) then
-                write(*,"(6x,A6,F5.3,A6,I3)") "coeff:", H(j,i), ", idx:", j
+                write(*,"(6x,A6,F6.3,A6,I3)") "coeff:", H(j,i), ", idx:", j
                 write(*,"(6x,A6)",advance='no') "n_up " 
                 do k=1,N
                     write(*,"(I2)", advance='no') V(j,k)
