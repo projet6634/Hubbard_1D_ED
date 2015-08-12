@@ -51,7 +51,7 @@ subroutine hms_current_hms ( h, m, s, mm )
   mm = values(8)
 
   return
-end
+end subroutine hms_current_hms
 subroutine hms_current_print ( string )
 
 !*****************************************************************************80
@@ -89,7 +89,7 @@ subroutine hms_current_print ( string )
   write ( *, '(a,2x,a,2x,a)' ) 'Wallclock:', string2, trim ( string )
 
   return
-end
+end subroutine hms_current_print
 subroutine hms_current_string ( string )
 
 !*****************************************************************************80
@@ -159,7 +159,7 @@ subroutine hms_current_string ( string )
     h, ':', n, ':', s, '.', mm, trim ( ampm )
 
   return
-end
+end subroutine hms_current_string
 subroutine hms_delta_print ( string )
 
 !*****************************************************************************80
@@ -253,7 +253,7 @@ subroutine hms_delta_print ( string )
     trim ( string )
 
   return
-end
+end subroutine hms_delta_print
 subroutine timestamp ( )
 
 !*****************************************************************************80
@@ -331,7 +331,7 @@ subroutine timestamp ( )
     d, trim ( month(m) ), y, h, ':', n, ':', s, '.', mm, trim ( ampm )
 
   return
-end
+end subroutine timestamp
 subroutine timestring ( string )
 
 !*****************************************************************************80
@@ -411,5 +411,5 @@ subroutine timestring ( string )
     d, trim ( month(m) ), y, h, ':', n, ':', s, '.', mm, trim ( ampm )
 
   return
-end
+end subroutine timestring
 end module m_datetime
