@@ -2,12 +2,13 @@ FC=gfortran
 
 FCFLAGS= -g -O2 -cpp
 FCFLAGS+=-I/usr/local/include
-LDFLAGS=-L/usr/local/lib 
+LDFLAGS=-L/usr/local/lib -llapack -lblas
+
+LIBS = 
 
 PROGRAMS=main
 
-OBJECTS=hubbard.o combination.o
-
+OBJECTS=combination.o datetime.o hubbard.o 
 all: $(PROGRAMS)
 
 main: $(OBJECTS)
@@ -20,7 +21,7 @@ main: $(OBJECTS)
 # used in order to list additional object files on which the
 # executable depends
 %: %.o
-	$(FC) $(FCFLAGS) -o $@ $^ $(LDFLAGS)
+	$(FC) $(FCFLAGS) $(LIBS) -o $@ $^ $(LDFLAGS)
 
 # General rules for building prog.o from prog.f90 or prog.F90; $< is
 # used in order to list only the first prerequisite (the source file)
